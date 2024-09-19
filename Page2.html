@@ -6,7 +6,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
   <style>
-   body {
+ body {
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
@@ -88,6 +88,79 @@
             background-color: #f28b82;
             color: #000;
         }
+       .btn {
+
+padding: 10px 26px;
+
+background-color: #f9fafb;
+
+border: 2px solid #111827;
+
+border-radius: 0.5rem;
+
+cursor: pointer;
+
+position: relative;
+
+transition: all 0.3s;
+}
+.btn::after {
+
+content: "";
+
+position: absolute;
+
+inset: 0;
+
+background-color: #111827; border-radius: inherit;
+
+translate: 6px 6px; transition: 0.25s;
+
+z-index:-1;
+}
+ .btn:hover::after {
+translate: 0;
+}
+.btn:hover {
+
+background-color: #111827;
+
+color: #f9fafb;
+
+}
+.btn{
+  font-family: 'Times'
+}
+.color{
+  color:#f28b82;
+}
+
+/* Cursor */
+.cursor{
+    position: relative;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+/* Animation */
+.typewriter-animation {
+  animation: 
+    typewriter 3s steps(50) 1s 1 normal both, 
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
+}
   </style>
  </head>
  <body>
@@ -118,12 +191,16 @@
   </div>
   <div class="main">
    <div class="content">
-    <h1>
-     Services 
+    <h2 class="cursor typewriter-animation">
+      <div class="color">
+        Services
+      </div>
     </h2>
-    <p>
-     CONTACT WHATSAP ME 081218496447
-    </p>
+    <h1>
+     <button class="btn">
+       contact me
+     </button>
+    </h1>
   </div>
  </body>
 </html>
